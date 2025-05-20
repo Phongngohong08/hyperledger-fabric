@@ -8,6 +8,7 @@ Tài liệu này hướng dẫn cài đặt môi trường và triển khai **Hy
 ## 1. Cài Đặt Phần Mềm Cần Thiết
 
 ```bash
+cd ~
 sudo apt-get install git
 sudo apt-get install curl
 sudo apt-get -y install docker-compose
@@ -26,7 +27,7 @@ Bật Docker khi khởi động:
 sudo systemctl enable docker
 ```
 
-Thêm user hiện tại vào group Docker (thay `phongnh` bằng tên user của bạn):
+Thêm user hiện tại vào group Docker (thay `phongnh` bằng tên user trên ubuntu của bạn):
 
 ```bash
 sudo usermod -a -G docker phongnh
@@ -82,7 +83,7 @@ cd fabric-samples/test-network
 docker ps -a
 
 # Tạo channel và deploy chaincode
-./network.sh createChannel
+./network.sh createChannel (mặc định sẽ sửa dụng leveldb và tên là mychannel)
 ./network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-go -ccl go
 ```
 
@@ -170,9 +171,13 @@ peer chaincode query -C mychannel -n basic -c '{"Args":["ReadAsset","asset6"]}'
 ```
 
 ---
-
+## Nguồn tài liệu
+`https://hyperledger-fabric.readthedocs.io/en/release-2.5/getting_started.html`
+`https://hyperledger-fabric.readthedocs.io/en/release-2.5/test_network.html`
+---
 ## Ghi Chú
 
 - Đảm bảo `docker` hoạt động và user đã được thêm vào group Docker.
 - Có thể cần đăng xuất và đăng nhập lại sau khi thêm user vào group.
 - Nếu gặp lỗi, kiểm tra kỹ các biến môi trường và logs từ Docker container.
+
