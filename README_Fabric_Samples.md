@@ -1,7 +1,7 @@
 
 # Hướng Dẫn Triển Khai Hyperledger Fabric Sample
 
-Tài liệu này hướng dẫn cài đặt môi trường và triển khai **Hyperledger Fabric Sample Test Network** trên hệ điều hành Ubuntu (nên dùng Ubuntu 24.04.2 LTS).
+Tài liệu này hướng dẫn cài đặt môi trường và triển khai **Hyperledger Fabric Sample Test Network** trên hệ điều hành Ubuntu (>= Ubuntu 22.04.5 LTS).
 
 ---
 
